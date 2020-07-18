@@ -1,12 +1,12 @@
 class Stack:
-     def __init__(self):
-         self.elements = []
+    def __init__(self):
+        self.elements = []
 
-     def push(self, item):
-         self.elements.append(item)
+    def push(self, item):
+        self.elements.append(item)
 
-     def pop(self):
-         return self.elements.pop()
+    def pop(self):
+        return self.elements.pop()
 
 
 class TreeNode:
@@ -14,6 +14,7 @@ class TreeNode:
         self.data = data
         self.right = None
         self.left = None
+
 
 def calc(node):
     if node.data is "+":
@@ -26,6 +27,7 @@ def calc(node):
         return calc(node.left) / calc(node.right)
     else:
         return node.data
+
 
 expr = "4 5 + 5 3 - *".split()
 stack = Stack()

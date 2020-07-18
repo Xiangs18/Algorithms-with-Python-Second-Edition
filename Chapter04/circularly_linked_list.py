@@ -3,6 +3,7 @@ class Node:
         self.data = data
         self.next = None
 
+
 class CircularList:
     def __init__(self, data=None):
         self.head = None
@@ -46,10 +47,11 @@ class CircularList:
             current = current.next
             yield val
 
+
 words = CircularList()
-words.append('eggs')
-words.append('ham')
-words.append('spam')
+words.append("eggs")
+words.append("ham")
+words.append("spam")
 
 counter = 0
 for word in words.iter():
@@ -59,14 +61,15 @@ for word in words.iter():
         break
 
 import sys
+
 sys.exit()
 
-l.append('foo')
-l.append('bar')
-l.append('bim')
-l.append('baz')
-l.append('quux')
-l.append('duux')
+l.append("foo")
+l.append("bar")
+l.append("bim")
+l.append("baz")
+l.append("quux")
+l.append("duux")
 
 counter = 0
 for item in l.iter():
@@ -76,8 +79,8 @@ for item in l.iter():
         break
 
 print("Done iterating. Now we try to delete something that isn't there.")
-l.delete('socks')
-print('back to iterating')
+l.delete("socks")
+print("back to iterating")
 counter = 0
 for item in l.iter():
     print(item)
@@ -85,9 +88,9 @@ for item in l.iter():
     if counter > 1000:
         break
 
-print('Let us delete something that is there.')
-l.delete('foo')
-print('back to iterating')
+print("Let us delete something that is there.")
+l.delete("foo")
+print("back to iterating")
 counter = 0
 for item in l.iter():
     print(item)

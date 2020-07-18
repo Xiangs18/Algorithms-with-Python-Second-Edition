@@ -1,10 +1,12 @@
 #! /usr/bin/env python3
 
+
 class Node:
     def __init__(self, data):
         self.data = data
         self.right_child = None
         self.left_child = None
+
 
 class Tree:
     def __init__(self):
@@ -42,25 +44,22 @@ class Tree:
             else:
                 current = current.right_child
 
+    def get_node_with_parent(self, data):
+        parent = None
+        current = self.root_node
+        if current is None:
+            return (parent, None)
+        while True:
+            if current.data == data:
+                return (parent, current)
+            elif current.data > data:
+                parent = current
+                current = current.left_child
+            else:
+                parent = current
+                current = current.right_child
 
-    def get_node_with_parent(self, data): 
-        parent = None 
-        current = self.root_node 
-        if current is None: 
-            return (parent, None) 
-        while True: 
-            if current.data == data: 
-                return (parent, current) 
-            elif current.data > data: 
-                parent = current 
-                current = current.left_child 
-            else: 
-                parent = current 
-                current = current.right_child 
-
-        return (parent, current) 
-   
-
+        return (parent, current)
 
 
 n1 = Node("root node")
@@ -87,4 +86,3 @@ tree.insert(1)
 for i in range(1, 10):
     found = tree.search(i)
     print("{}: {}".format(i, found))
-

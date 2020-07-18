@@ -5,7 +5,7 @@ def hash(data):
         sum += counter * ord(d)
     return sum % 256
 
-items = ['foo', 'bar', 'bim', 'baz', 'quux', 'duux', 'gnn']
+
+items = ["foo", "bar", "bim", "baz", "quux", "duux", "gnn"]
 for item in items:
     print("{}: {}".format(item, hash(item)))
-

@@ -1,4 +1,3 @@
-
 def search(ordered_list, term):
     ordered_list_size = len(ordered_list)
     for i in range(ordered_list_size):
@@ -8,7 +7,6 @@ def search(ordered_list, term):
             return None
 
     return None
-
 
 
 scores = [2, 3, 4, 6, 7]

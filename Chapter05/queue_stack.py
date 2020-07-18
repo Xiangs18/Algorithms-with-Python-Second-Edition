@@ -23,4 +23,3 @@ print(queue.inbound_stack)
 print(queue.outbound_stack)
 queue.dequeue()
 print(queue.outbound_stack)
-

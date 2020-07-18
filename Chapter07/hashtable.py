@@ -3,6 +3,7 @@ class HashItem:
         self.key = key
         self.value = value
 
+
 class HashTable:
     def __init__(self):
         self.size = 256
@@ -34,7 +35,7 @@ class HashTable:
         while self.slots[h] is not None:
             if self.slots[h].key is key:
                 return self.slots[h].value
-            h = (h+ 1) % self.size
+            h = (h + 1) % self.size
         return None
 
     def __setitem__(self, key, value):
@@ -43,6 +44,7 @@ class HashTable:
     def __getitem__(self, key):
         return self.get(key)
 
+
 ht = HashTable()
 ht["good"] = "eggs"
 ht["better"] = "ham"
@@ -50,7 +52,6 @@ ht["best"] = "spam"
 ht["ad"] = "do not"
 ht["ga"] = "collide"
 ht["data"] = "value"
-
 
 
 for key in ("good", "better", "best", "worst", "ad", "ga"):
